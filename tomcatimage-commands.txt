@@ -1,0 +1,15 @@
+docker build -t tomcatimage .
+
+docker inspect tomcatimage
+
+docker images
+
+docker login --username 'your_username'
+
+docker tag tomcatimage 'your_username'/tomcat01
+
+docker push 'your_username'/tomcat01
+
+docker pull 'your_username'/tomcat01
+
+docker run --name tomcatRunner -p 8080:80 -d tomcatimage
